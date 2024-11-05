@@ -1,43 +1,89 @@
 /* External CSS */
 
+/* CSS VARIABLES */
+:root {
+  --primaryColor: #9DAD6F;
+  --secondaryColor: #BCD979;
+  --accentColor: #C3DFE0;
+
+  --sizingSmal: 5px;
+  --sizingMedium: 8px;
+  --sizingLarge: 20px;
+
+  --primaryFontFamily: "Times";
+  --secondaryFontFamily: "Helvetica";
+}
+
+/* GLOBAL CSS */
+.fullScreen {
+  min-width: 100vh;
+}
+
+.CardWidth {
+  max-width: 300px;
+}
+
+.split {
+  width: 50%;
+}
+
+.flex {
+  display: flex;
+}
+
+.jcCenter {
+  justify-content: center;
+}
+
+.jcSpaceBetween {
+  justify-content: space-between;
+}
+
+.jcEnd {
+  justify-content: end;
+}
+
+.aiCenter {
+  align-items: center;
+}
+
+.flexCol  {
+  flex-direction: column;
+}
+
+.listNoDot {
+  list-style-type: none;
+}
+
 /* body is a CSS Selector */
 /* {} idicates a CSS Declaration */
 body {
   /* property:value; is a CSS Rule */
-  background-color: #fdfdfd;
+  background-color: var(--primaryColor);
   color: #0d0d0d;
 }
 
 /* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
+  padding: var(--sizingMedium) 0;
+  border-bottom: var(--sizingSmal) solid var(--secondaryColor);
 }
 
 .headerLogo {
-  padding: 8px;
+  padding: var(--sizingMedium);
   border: 2px solid black;
   border-radius: 50%;
 }
 
 ul {
-  display: flex;
-  justify-content: end;
-  gap: 15px;
-  list-style-type: none;
+  gap: var(--sizingLarge);
   margin: 0;
   padding: 0;
 }
 
 /* MAIN */
-main {
-  height: 100vh;
-}
 
 /* FOOTER */
 footer {
-  display: flex;
-  justify-content: center;
+  border-top: var(--sizingSmal) solid var(--secondaryColor);
 }
